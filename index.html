@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ro" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abur – cafenea și ceainărie</title>
+<meta name="description" content="Abur: ceainărie ziua, cafenea seara. Meniu, combo-uri, abonamente și rezervări.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="#sus">Abur</a>
+  <nav><a href="#meniu">Meniu</a><a href="#combo">Combo</a><a href="#planuri">Abonamente</a><a href="#vizita">Vizită</a></nav>
+  <button class="mode" id="mode" role="switch" aria-checked="true" aria-label="Schimbă între cafenea și ceainărie">
+    <span class="opt o-dark">Cafenea</span><span class="opt o-light">Ceainărie</span><span class="thumb"></span>
+  </button>
+</div></header>
+
+<main id="sus">
+<section class="hero"><div class="wrap hgrid">
+  <div class="copy">
+    <h1 id="h1"></h1>
+    <p id="lead" class="lead"></p>
+    <div class="cta"><a class="btn" href="#meniu" id="cta1"></a><a class="btn ghost" href="#vizita">Rezervă o masă</a></div>
+  </div>
+  <div class="stage" aria-hidden="true">
+    <div class="glow"></div>
+    <div class="orbit" id="orbit"></div>
+    <svg class="cup" viewBox="0 0 400 380">
+      <ellipse cx="200" cy="318" rx="150" ry="26" class="sauc"/>
+      <ellipse cx="200" cy="308" rx="130" ry="20" class="sauc2"/>
+      <path class="handle" d="M292 196c46-8 52 50 0 64" fill="none" stroke-width="16" stroke-linecap="round"/>
+      <path class="body" d="M104 184h192c0 78-34 124-96 124s-96-46-96-124z"/>
+      <ellipse class="rim" cx="200" cy="184" rx="96" ry="18"/>
+      <ellipse class="liq" cx="200" cy="186" rx="84" ry="12"/>
+      <path class="art" d="M200 190c-14-10-24-6-20 2s14 8 20 2c6 6 16 6 20-2s-6-12-20-2z"/>
+      <g class="tag"><path d="M214 186c20-4 40 6 58 30" fill="none" stroke-width="3"/><rect x="266" y="212" width="26" height="30" rx="4"/></g>
+      <g class="steam" fill="none" stroke-linecap="round" stroke-width="7">
+        <path d="M165 150c-22-24 18-42-2-72" style="--d:0s"/>
+        <path d="M200 144c-22-28 20-48 0-86" style="--d:.9s"/>
+        <path d="M235 150c-22-24 18-42-2-72" style="--d:1.8s"/>
+      </g>
+    </svg>
+  </div>
+</div></section>
+
+<div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+
+<section class="s1" id="cifre"><div class="wrap stats">
+  <div class="stat reveal"><span class="num" data-to="40">0</span><span class="plus">+</span><p>băuturi în meniu</p></div>
+  <div class="stat reveal"><span class="num" data-to="12">0</span><p>sortimente de boabe și frunze</p></div>
+  <div class="stat reveal"><span class="num" data-to="49" data-dec="1">0</span><p>nota medie din 5</p></div>
+  <div class="stat reveal"><span class="num" data-to="7">0</span><p>zile pe săptămână</p></div>
+</div></section>
+
+<section class="s2" id="meniu"><div class="wrap">
+  <h2 class="reveal" id="mtitle"></h2>
+  <p class="sub reveal" id="msub"></p>
+  <div class="tabs reveal" id="tabs" role="tablist"></div>
+  <ul class="menu" id="menu"></ul>
+  <div class="extras reveal"><h3>Extra</h3><ul id="extras"></ul></div>
+</div></section>
+
+<section class="s3" id="combo"><div class="wrap">
+  <h2 class="reveal" id="ctitle"></h2>
+  <p class="sub reveal">Perechi gândite să meargă bine împreună, la un preț mai mic decât separat.</p>
+  <div class="combos" id="combos"></div>
+</div></section>
+
+<section class="s4" id="despre"><div class="wrap two">
+  <div class="reveal">
+    <h2>Ziua la Abur</h2>
+    <p id="about"></p>
+    <p class="mut">Folosește butonul din colț ca să treci de la cafenea la ceainărie.</p>
+  </div>
+  <ol class="timeline" id="timeline">
+    <li class="reveal"><time>08:00</time><b>Deschidem</b><span>Primul espresso și primul ceainic al zilei.</span></li>
+    <li class="reveal"><time>12:00</time><b>Meniul de prânz</b><span>Combo-uri cu sandvișuri, salate și tarte.</span></li>
+    <li class="reveal"><time>17:00</time><b>Trecem la cafenea</b><span>Lumina se face caldă și apar espresso-urile.</span></li>
+    <li class="reveal"><time>20:00</time><b>Muzică live</b><span>Joia și sâmbăta, în surdină.</span></li>
+    <li class="reveal"><time>22:00</time><b>Ultima comandă</b><span>În weekend, la 23:00.</span></li>
+  </ol>
+</div></section>
+
+<section class="s1" id="planuri"><div class="wrap">
+  <h2 class="reveal">Abonamente</h2>
+  <p class="sub reveal">Plătești o dată pe lună și vii când vrei. Băuturile se folosesc la oricare dintre cele două meniuri.</p>
+  <div class="plans">
+    <article class="plan reveal"><h3>Ocazional</h3><p class="price">89 lei<small>/lună</small></p>
+      <ul><li>10 băuturi la alegere</li><li>Lapte vegetal gratis</li><li>Valabil 30 de zile</li></ul><a class="btn ghost" href="#vizita">Alege</a></article>
+    <article class="plan hot reveal"><span class="badge">Cel mai ales</span><h3>Zilnic</h3><p class="price">199 lei<small>/lună</small></p>
+      <ul><li>30 de băuturi la alegere</li><li>Un desert pe săptămână</li><li>10% la combo-uri</li></ul><a class="btn" href="#vizita">Alege</a></article>
+    <article class="plan reveal"><h3>Echipă</h3><p class="price">390 lei<small>/lună</small></p>
+      <ul><li>60 de băuturi pentru 4 persoane</li><li>Masă rezervată luni dimineața</li><li>Factură pe firmă</li></ul><a class="btn ghost" href="#vizita">Alege</a></article>
+  </div>
+</div></section>
+
+<section class="s2" id="parere"><div class="wrap">
+  <h2 class="reveal">Ce spun clienții</h2>
+  <div class="quotes">
+    <figure class="reveal"><blockquote>Cel mai bun flat white din oraș și o atmosferă în care chiar poți lucra.</blockquote><figcaption><i>I</i>Ioana M.</figcaption></figure>
+    <figure class="reveal"><blockquote>Ceainicul pentru doi și clepsidra sunt o idee bună. Ceaiul iese perfect.</blockquote><figcaption><i>R</i>Radu T.</figcaption></figure>
+    <figure class="reveal"><blockquote>Seara e cafenea, ziua e ceainărie. Vin la ambele și nu mă plictisesc.</blockquote><figcaption><i>E</i>Elena P.</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="s3" id="faq"><div class="wrap narrow">
+  <h2 class="reveal">Întrebări frecvente</h2>
+  <details class="reveal"><summary>Aveți wifi?</summary><p>Da, gratuit, iar parola e pe fiecare masă.</p></details>
+  <details class="reveal"><summary>Putem veni cu câinele?</summary><p>Da, în zona de terasă.</p></details>
+  <details class="reveal"><summary>Primiți grupuri mari?</summary><p>De la 6 persoane recomandăm rezervare cu o zi înainte.</p></details>
+  <details class="reveal"><summary>Aveți lapte vegetal?</summary><p>Avem lapte de ovăz, soia și migdale, la +2 lei.</p></details>
+</div></section>
+
+<section class="s4" id="vizita"><div class="wrap two">
+  <div class="reveal">
+    <h2>Vino la noi</h2>
+    <dl class="info">
+      <dt>Program</dt><dd>Luni – Vineri: 8:00 – 22:00<br>Sâmbătă – Duminică: 9:00 – 23:00</dd>
+      <dt>Adresă</dt><dd>Strada Teilor 12</dd>
+      <dt>Telefon</dt><dd>0700 000 000</dd>
+      <dt>Plată</dt><dd>Cash, card și tichete de masă</dd>
+    </dl>
+  </div>
+  <form id="rez" class="form reveal">
+    <h3>Rezervă o masă</h3>
+    <label>Nume<input name="n" required autocomplete="name"></label>
+    <div class="r2"><label>Data<input type="date" name="d" required></label>
+    <label>Persoane<select name="p"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></label></div>
+    <button class="btn" type="submit">Trimite rezervarea</button>
+    <p id="rmsg" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Abur. Site demonstrativ: prețurile, abonamentele și rezervările nu sunt reale.</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
